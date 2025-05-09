@@ -1,7 +1,7 @@
-Make a site-wide header (header), with a navigation section (nav).
-The nav should have sections that categorize and organize different recipes. - J.
+//Make a site-wide header (header), with a navigation section (nav).
+//The nav should have sections that categorize and organize different recipes. - J.
 
-Add more recipes so it actually works. - Z.
+//Add more recipes so it actually works. - Z.
 
-Add a toggle that changes the portion sizes. - Z.
+//Add a toggle that changes the portion sizes. - Z.
 
