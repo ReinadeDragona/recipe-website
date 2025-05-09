@@ -1,0 +1,102 @@
+* {
+	box-sizing: border-box;
+}
+
+
+h1 {
+	font-size: 2rem;
+}
+
+
+h2 {
+	font-size: 1.6rem;
+}
+
+
+h3 {
+	font-size: 1.2rem;
+}
+
+
+body {
+	background-color: hsla(60, 100%, 50%, 50%);
+	font-family: Book Antiqua;
+	font-size:
+		padding: 10px;
+}
+
+
+.pagename {
+	text-align: center;
+	margin-bottom: 50px;
+	width: 50%;
+	text-align: left;
+}
+
+
+.smalltext {
+	font-size: 0.75em;
+	margin-right: 5px;
+}
+
+
+.author {
+	margin-bottom: 25px;
+}
+
+
+.image {
+	width: auto;
+	height: 15rem;
+	max-width: 50%;
+
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+
+#overview-summary {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	gap: 0.5rem;
+
+	font-size: 1.3rem;
+	font-weight: bold;
+}
+
+
+.spaced-list {
+	text-align: justify;
+}
+
+
+.ingredients {
+	margin-bottom: 50px;
+}
+
+
+.steps {}
+
+
+@media only screen and (max-width: 600px) {
+	#overview-summary {
+		width: 100%;
+	}
+
+	.image {
+		position: initial;
+		height: auto;
+		width: auto;
+		margin: 1rem;
+	}
+
+	.pagename {
+		width: 100%;
+	}
+}
