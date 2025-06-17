@@ -1,5 +1,6 @@
 * {
 	box-sizing: border-box;
+	font-weight: bold;
 }
 
 
@@ -12,26 +13,25 @@ h2 {
 	font-size: 1.6rem;
 }
 
-
 h3 {
 	font-size: 1.2rem;
 }
 
-
 body {
 	background-color: hsla(60, 100%, 50%, 50%);
 	font-family: Book Antiqua;
-	padding: 10px;
+	padding: 1em;
 }
 
 
 .pagename {
 	text-align: center;
-	margin-bottom: 50px;
-	width: 50%;
-	text-align: left;
+	width: 60%;
 }
 
+.pagetitle {
+	margin-bottom: 0;
+}
 
 .smalltext {
 	font-size: 0.75em;
@@ -40,14 +40,14 @@ body {
 
 
 .author {
-	margin-bottom: 25px;
+	margin-bottom: 4rem;
 }
 
 
 .image {
 	width: auto;
 	height: 15rem;
-	max-width: 50%;
+	max-width: 35%;
 
 	position: absolute;
 	top: 0;
@@ -57,8 +57,7 @@ body {
 
 #overview-summary {
 	list-style-type: none;
-	margin: 0;
-	padding: 0;
+	margin-bottom: 4rem;
 
 	display: flex;
 	align-items: center;
@@ -69,16 +68,44 @@ body {
 	font-weight: bold;
 }
 
-
-.spaced-list {
-	text-align: justify;
+#buttons {
+	text-align: center;
+	width: 60%;
+	margin-bottom: 2rem;
 }
 
 
 .ingredients {
-	margin-bottom: 50px;
+	float: left;
+	width: 35%;
 }
 
+.mainingredients {
+	margin-bottom: 4rem;
+}
+
+
+.steps {
+	float: right;
+	width: 65%;
+}
+
+.stepstitle {
+	text-align: center;
+}
+
+.steps1 {
+	text-align: justify;
+	line-height: 1.4; 
+}
+
+.steps2 {
+	text-align: justify;
+}
+
+.steps3 {
+	text-align: justify;
+}
 
 @media only screen and (max-width: 600px) {
 	#overview-summary {
@@ -93,6 +120,10 @@ body {
 	}
 
 	.pagename {
+		width: 100%;
+	}
+
+	.buttons {
 		width: 100%;
 	}
 }
