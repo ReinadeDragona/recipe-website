@@ -1,11 +1,18 @@
+:root {
+	--default-transition-duration: 300ms;
+}
+
+
 * {
 	box-sizing: border-box;
-	font-weight: bold;
 }
 
 
 h1 {
 	font-size: 2rem;
+	margin: 0;
+	margin-bottom: 1rem;
+	padding: 0;
 }
 
 
@@ -21,6 +28,29 @@ body {
 	background-color: hsla(60, 100%, 50%, 50%);
 	font-family: Book Antiqua;
 	padding: 1em;
+}
+
+
+header {
+	&>nav {
+		&>#nav-home {
+			background-color: coral;
+			padding: 1rem;
+			border-radius: 1rem;
+			transition-duration: var(--default-transition-duration);
+
+
+			text-decoration: none;
+			color: black;
+			position: absolute;
+			right: .5rem;
+			top: 1rem;
+
+			&:hover {
+				background-color: red;
+			}
+		}
+	}
 }
 
 
@@ -88,6 +118,7 @@ body {
 .steps {
 	float: right;
 	width: 65%;
+
 }
 
 .stepstitle {
@@ -107,6 +138,12 @@ body {
 	text-align: justify;
 }
 
+.portion_buttons {
+	position: absolute;
+	margin-top: 2rem;
+
+}
+
 @media only screen and (max-width: 600px) {
 	#overview-summary {
 		width: 100%;
@@ -116,7 +153,6 @@ body {
 		position: initial;
 		height: auto;
 		width: auto;
-		margin: 1rem;
 	}
 
 	.pagename {
