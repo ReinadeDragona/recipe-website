@@ -1,37 +1,37 @@
-const buttons = document.getElementById("buttons");
+//Contains small tweaks to help development. 
+//NEEDS to be defined first.
+var developmentTweaks = false;
 
-buttons.addEventListener('click'myfunction(steps2){
-	document.getElementsByClassName('portion2').innertext = 'steps2'
+if (document.readyState !== "loading") {
+	setTimeout(onReady, 0);
+} else {
+	document.addEventListener("DOMContentLoaded", onReady);
+}
 
+async function onReady() {
+	if (developmentTweaks === true)
+		console.log(Date());
 
+	Promise.all([
+		initializeListeners(),
+		updatePortions()
+	]);
+}
 
+async function initializeListeners() {
+	document.getElementById('portion-quantity').addEventListener("input", updatePortions);
+}
 
-
-
-
-
-/*<button class="portion1" type="button">
-	1x:10 Sandwiches
-</button>
-<button class="portion2" type="button">
-		2x:20 Sandwiches
-</button>
-	
-<button class="portion3" type="button">
-		3x:0 Sandwiches
-</button>		
-
-document.getElementsByClassName(buttons)
-
-function myfunction() {
-	if(class="portion1")
-		console.log(steps1);
-
-	if (class="portion2") {
-		console.log(steps2);
-	{"}"}
-
-	if (class="portion3") {
-		console.log(steps3);
-}*/
-
+async function updatePortions() {
+	var portionQuantityElement = document.getElementById('portion-quantity');
+	if (portionQuantityElement.value < 1) {
+		portionQuantityElement.value = 1;
+	}
+	else if (portionQuantityElement.value > 10) {
+		portionQuantityElement.value = 10;
+	}
+	var portionElements = document.querySelectorAll('.portion-number');
+	portionElements.forEach(async function (portionElement) {
+		portionElement.innerText = portionElement.getAttribute('original-number') * portionQuantityElement.value;
+	});
+}

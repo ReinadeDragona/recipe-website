@@ -6,6 +6,7 @@
 - How do I keep the buttons off of the home page but have them show on the recipe pages? - M.
 - Add more recipes so it actually works. - M.
 - Add portion options like the Egg Salad Sandwich idea. - M.
+- Make a popup message that informs users of portion quantity restrictions. - M.
 
 ## General Notes
 
