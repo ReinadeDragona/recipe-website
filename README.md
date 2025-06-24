@@ -7,6 +7,7 @@
 - Add more recipes so it actually works. - M.
 - Add portion options like the Egg Salad Sandwich idea. - M.
 - Make a popup message that informs users of portion quantity restrictions. - M.
+- Add a timer with BUTTONS!!!!!!!!!!!!!!! - M.
 
 ## General Notes
 
