@@ -5,10 +5,18 @@ define('APP_ROOT', '/');
 define('RECIPES', [
     1 => [
         'name' => 'Egg Salad Sandwiches',
-            'ingredients' => [
-            '8-10 Eggs',
-            'Yellow Mustard',
-            'Mayonaise',
+        'ingredients' => [
+            [
+                'minimum_quantity' => 8,
+                'maximum_quantity' => 10,
+                'item_name' => 'Eggs'
+            ],
+            [
+                'item_name' => 'Yellow Mustard',
+            ],
+            [
+                'item_name' => 'Mayonaise',
+            ],
         ],
         'steps' => [
             'Boil water in a pot - put the stove on high.',
@@ -103,53 +111,31 @@ define('RECIPES', [
     ],
     6 => [
         'name' => 'Meatloaf',
-        'ingredients' => [
-
-        ],
-        'steps' => [
-
-        ],
+        'ingredients' => [],
+        'steps' => [],
     ],
     7 => [
         'name' => 'Lava Cakes',
-        'ingredients' => [
-
-        ],
-        'steps' => [
-
-        ],
+        'ingredients' => [],
+        'steps' => [],
     ],
     8 => [
         'name' => 'Chicken Parmesian',
-        'ingredients' => [
-
-        ],
-        'steps' => [
-
-        ],
+        'ingredients' => [],
+        'steps' => [],
     ],
     9 => [
         'name' => 'Steak and Cheese Melt',
-        'ingredients' => [
-
-        ],
-        'steps' => [
-
-        ],
+        'ingredients' => [],
+        'steps' => [],
     ],
-     10 => [
+    10 => [
         'name' => 'Tomato Soup',
-        'ingredients' => [
-
-        ],
-        'steps' => [
-
-        ],
+        'ingredients' => [],
+        'steps' => [],
     ],
 ]);
 
 
 //Setting any configuration options.
 $GLOBALS['constants'] = get_defined_constants();
-?>
-
