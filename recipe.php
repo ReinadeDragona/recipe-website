@@ -22,9 +22,7 @@ if (file_exists(__DIR__ . '/css/recipes/' . $recipeFileName . '.css')) {
 echo '<div id="recipe-' . $recipeID . '">
     <h2>' . $recipe['name'] . '</h2>';
 echo $recipe['image'];
-echo '<h3>Ingredients</h3>
-
-    <input type="number" value="1" id="portion-quantity"/>
+echo '<h3>Ingredients   <span><input type="number" value="1" id="portion-quantity"/></span></h3>
 
     <table>
         <thead>
@@ -38,12 +36,8 @@ echo '<h3>Ingredients</h3>
 
 foreach ($recipe['ingredients'] as $ingredientInformation) {
     $quantity = '';
-    if (isset($ingredientInformation['minimum_quantity']) === true)
-        $quantity .= '<span class="portion-number" original-number="' . $ingredientInformation['minimum_quantity'] . '">' . $ingredientInformation['minimum_quantity'] . '</span>';
-    if (isset($ingredientInformation['maximum_quantity']) === true) {
-        if (isset($ingredientInformation['minimum_quantity']) === true)
-            $quantity .= '-';
-        $quantity .= '<span class="portion-number" original-number="' . $ingredientInformation['maximum_quantity'] . '">' . $ingredientInformation['maximum_quantity'] . '</span>';
+    if (isset($ingredientInformation['quantity']) === true)
+        $quantity .= '<span class="portion-number" original-number="' . $ingredientInformation['quantity'] . '">' . '</span>';
     }
 
     echo
@@ -53,7 +47,7 @@ foreach ($recipe['ingredients'] as $ingredientInformation) {
         <td>' . $ingredientInformation['unit'] . '</td>
     </tr>
     ';
-}
+
 echo '
         </tbody>
     </table>';

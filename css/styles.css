@@ -24,7 +24,8 @@ h2 {
 
 h3 {
 	font-size: 1.4rem;
-	margin-top: 0;
+	margin-top: 1rem;
+	width: 50%;
 }
 
 body {
@@ -75,10 +76,6 @@ input[type=number] {
 table {
 	text-align: center;
 	border-spacing: .50rem;
-}
-
-steps {
-	line-height: 20px;
 }
 
 @media only screen and (max-width: 600px) {
