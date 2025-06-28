@@ -24,7 +24,7 @@ async function initializeListeners() {
 
 async function updatePortions() {
 	var portionQuantityElement = document.getElementById('portion-quantity');
-	if (portionQuantityElement.value < 1) {
+	if (portionQuantityElement.value < 0) {
 		portionQuantityElement.value = 1;
 	}
 	else if (portionQuantityElement.value > 10) {

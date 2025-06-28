@@ -20,12 +20,22 @@ if (file_exists(__DIR__ . '/css/recipes/' . $recipeFileName . '.css')) {
 }
 
 echo '<div id="recipe-' . $recipeID . '">
-    <h2>' . $recipe['name'] . '</h2>
-    <h3>Ingredients</h3>
+    <h2>' . $recipe['name'] . '</h2>';
+echo $recipe['image'];
+echo '<h3>Ingredients</h3>
 
     <input type="number" value="1" id="portion-quantity"/>
 
-    <ul>';
+    <table>
+        <thead>
+            <tr>
+                <th><u>Ingredient Name</u></th>
+                <th><u>Quantity</u></th>
+                <th><u>Unit</u></th>
+            </tr>
+        </thead>
+        <tbody>';
+
 foreach ($recipe['ingredients'] as $ingredientInformation) {
     $quantity = '';
     if (isset($ingredientInformation['minimum_quantity']) === true)
@@ -36,20 +46,25 @@ foreach ($recipe['ingredients'] as $ingredientInformation) {
         $quantity .= '<span class="portion-number" original-number="' . $ingredientInformation['maximum_quantity'] . '">' . $ingredientInformation['maximum_quantity'] . '</span>';
     }
 
-    echo '<li>' . ($quantity !== '' ? $quantity . ' ' : '') . $ingredientInformation['item_name'] . '</li>';
+    echo
+    '<tr>
+        <td>' . $ingredientInformation['item_name'] . '</td>
+        <td>' . $quantity . '</td>
+        <td>' . $ingredientInformation['unit'] . '</td>
+    </tr>
+    ';
 }
-echo '</ul>';
+echo '
+        </tbody>
+    </table>';
 
-echo '<h3>Steps</h3>';
-echo '<ol>';
+echo '<h3>Steps</h3>
+    <ol>';
 foreach ($recipe['steps'] as $steps) {
     echo '<li>' . $steps . '</li>';
 }
-echo '</ol>';
-
-echo '</div>';
-
-
+echo '</ol>;
+</div>';
 
 
 require_once(__DIR__ . '/includes/templates/footer.php');

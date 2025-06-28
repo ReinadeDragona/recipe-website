@@ -2,7 +2,9 @@
 
 ## Questions
 
-- How do I connect my portion buttons to be next to the ingredients? How do I relate the two with the current code setup? - M.
+- Remove arrows from portion box
+    - How to do this - Jadin's way did not work
+- How to move ingredients up since I centered the recipe name and image - also need to have ingredients move back down teh page for the mobile or minimizing screens - M.
 - How do I keep the buttons off of the home page but have them show on the recipe pages? - M.
 - Add more recipes so it actually works. - M.
 - Add portion options like the Egg Salad Sandwich idea. - M.
